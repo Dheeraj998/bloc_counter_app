@@ -35,9 +35,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
   final String title;
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +92,6 @@ class MyHomePage extends StatelessWidget {
           FloatingActionButton(
             onPressed: () {
               context.read<CounterBloc>().add(Decrement());
-              // BlocProvider.of<CounterBloc>(context).add(Increment());
             },
             tooltip: 'Decrement',
             child: const Icon(Icons.remove),
@@ -101,7 +99,6 @@ class MyHomePage extends StatelessWidget {
           FloatingActionButton(
             onPressed: () {
               context.read<CounterBloc>().add(Increment());
-              // BlocProvider.of<CounterBloc>(context).add(Increment());
             },
             tooltip: 'Increment',
             child: const Icon(Icons.add),
